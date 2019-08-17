@@ -115,11 +115,8 @@ export default {
 
   computed: {
     search () {
-      let arr = []
-      this.brandList.filter((e) => {
-        if (e.brand.indexOf(this.keyword) !== -1) {
-          arr.push(e)
-        }
+      let arr = this.brandList.filter(e => {
+        return e.brand.indexOf(this.keyword) !== -1
       })
       return arr
     }

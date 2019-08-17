@@ -86,31 +86,10 @@ export default {
       this.branList.splice(i, 1)
     }
   },
-  // directives: {
-  //   myfocus: {
-  //     inserted (el) {
-  //       el.focus()
-  //     }
-  //   },
-  //   mycolor: {
-  //     inserted (el, bind) {
-  //       el.style.color = bind.value
-  //     }
-  //   }
 
-  // }
   directives: {
     myfocus, mycolor
   },
-
-  //   filters: {
-  //     timeFormat (time, spe) {
-  //       let year = time.getFullYear()
-  //       let month = time.getMonth() + 1
-  //       let day = time.getDate()
-  //       return year + spe + month + spe + day
-  //     }
-  //   }
 
   //   筛选属性
 
@@ -121,11 +100,8 @@ export default {
   //   计算属性
   computed: {
     search () {
-      let arr = []
-      this.branList.filter((e) => {
-        if (e.brand.indexOf(this.keyworld) !== -1) {
-          arr.push(e)
-        }
+      let arr = this.branList.filter((e) => {
+        return e.brand.indexOf(this.keyworld) !== -1
       })
 
       return arr
