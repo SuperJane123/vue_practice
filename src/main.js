@@ -7,14 +7,14 @@ import Vue from 'vue'
 // import Vbind from './components/04.v-bind.vue'
 // import Vfor from './components/05.v-for.vue'
 // import Vmodel from './components/06.v-model.vue'
-// import showData from './components/07.showData_case.vue'
+import showData from './components/07.showData_case.vue'
 // import showData from './components/08.添加数据练习.vue'
 // import Von from './components/09.v-on.vue'
 // import VElseIf from './components/10.v-if-else.vue'
-import mounted from './components/11-mounted钩子函数.vue'
+// import mounted from './components/11-mounted钩子函数.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(mounted)
+  render: h => h(showData)
 }).$mount('#app')
