@@ -19,7 +19,7 @@
           <th>操作</th>
         </thead>
         <tbody>
-          <tr v-for='(val,index) in search' :key='index'>
+          <tr v-for='(val,index) in List' :key='index'>
             <td>{{val.id}}</td>
             <td>{{val.name}}</td>
             <td>{{val.time | timeFormat('-')}}</td>
@@ -27,7 +27,7 @@
               <a href="#" @click.prevent="del(index)">删除</a>
             </td>
           </tr>
-          <tr v-show="search.length == 0">没有数据显示</tr>
+          <tr v-show="List.length == 0">没有数据显示</tr>
         </tbody>
       </table>
     </div>
@@ -66,8 +66,31 @@ export default {
           name: 'PHP',
           time: new Date()
         }
-      ]
+      ],
+      List: [
+        {
+          id: 1,
+          name: '大前端',
+          time: new Date()
+        },
+        {
+          id: 2,
+          name: 'UI',
+          time: new Date()
+        },
+        {
+          id: 3,
+          name: 'JAVA',
+          time: new Date()
+        },
+        {
+          id: 4,
+          name: 'PHP',
+          time: new Date()
+        }
+      ],
     }
+    
   },
 
   // 自定义属性
@@ -110,11 +133,22 @@ export default {
   },
 
   // 计算属性
-  computed: {
-    search () {
-      return this.brandList.filter(e =>
-        e.name.indexOf(this.keyword) !== -1
+  // computed: {
+  //   search () {
+  //     return this.brandList.filter(e =>
+  //       e.name.indexOf(this.keyword) !== -1
+  //     )
+  //   }
+  // },
+
+
+  watch: {
+    keyword(newV){
+        this.List=this.brandList.filter(e=>
+        e.name.indexOf(newV) !== -1
       )
+      console.log(this.List)
+      
     }
   },
 
