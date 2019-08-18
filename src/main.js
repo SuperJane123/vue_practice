@@ -14,10 +14,12 @@ import './styles/animate.css'
 // import VElseIf from './components/10.v-if-else.vue'
 // import mounted from './components/11-mounted钩子函数.vue'
 // import watch from './components/12.watch.vue'
-import transtion from './components/13.vue使用类方式和第三方库练习动画.vue'
+// import transtion from './components/13.vue使用类方式和第三方库练习动画.vue'
+import asiox from './components/14.asiox中get和post的请求方式.vue'
+
+// Vue.use(Asiox)
 
 Vue.config.productionTip = false
-
 new Vue({
-  render: h => h(transtion)
+  render: h => h(asiox)
 }).$mount('#app')

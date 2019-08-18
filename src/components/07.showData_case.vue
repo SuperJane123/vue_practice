@@ -107,16 +107,23 @@ export default {
   methods: {
     add () {
       this.product.time = new Date()
+      this.List.push({ ...this.product })
       this.brandList.push({ ...this.product })
+      this.product.id = '',
+      this.product.name =''
     },
     // 根据索引删除
     del (index) {
+
+     this.List.splice(index, 1)
       this.brandList.splice(index, 1)
     },
 
     // 键盘事件
     key () {
-      this.product.time = new Date()
+            this.product.time = new Date()
+
+      this.List.push({ ...this.product })
       this.brandList.push({ ...this.product })
     }
 
