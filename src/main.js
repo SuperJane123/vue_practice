@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './styles/animate.css'
 // import App from './App.vue'
 // 引入vue文件
 // import first from './components/01-插值表达式.vue'
@@ -12,10 +13,11 @@ import Vue from 'vue'
 // import Von from './components/09.v-on.vue'
 // import VElseIf from './components/10.v-if-else.vue'
 // import mounted from './components/11-mounted钩子函数.vue'
-import watch from './components/12.watch.vue'
+// import watch from './components/12.watch.vue'
+import transtion from './components/13.vue使用类方式和第三方库练习动画.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(watch)
+  render: h => h(transtion)
 }).$mount('#app')
