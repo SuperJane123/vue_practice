@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>这是组件</p>
+<!-- 使用router-link实现路由导航 -->
+    <router-link to="/index">首页</router-link> &nbsp;&nbsp;&nbsp;&nbsp;
+    <router-link to="/product">产品页</router-link>
+    <!-- <a href="#/index">首页</a>
+    <a href="#/product">产品页</a> -->
+
+    <!-- 添加路由展示区域 -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+
   }
 }
 </script>
 
 <style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
