@@ -5,29 +5,26 @@
             <p v-show="show">hello</p>
         </transition> -->
 
-        <transition enter-active-class="animated bounceInDown" leave-active-class="animated bounceInUp"> 
+        <transition enter-active-class="animated bounceInDown" leave-active-class="animated bounceInUp">
             <p v-show="show" class="with">hello</p>
         </transition>
 
     </div>
 </template>
 
-
-
 <script>
 export default {
-    data(){
-        return {
-            show: true
-        }
-    },
+  data () {
+    return {
+      show: true
+    }
+  }
 
-    // methods: {
-        
-    // }
+  // methods: {
+
+  // }
 }
 </script>
-
 
 <style lang="less" scoped>
     .fade-enter {
@@ -56,6 +53,6 @@ export default {
     .with {
         width: 200px;
         height:50px;
-        
+
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div class="index">
-        <h1>首页</h1>
+    <div class="cloths">
+        <p>这是服装详情</p>
     </div>
 </template>
 
