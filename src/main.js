@@ -2,7 +2,7 @@ import Vue from 'vue'
 import './styles/animate.css'
 
 // 引入路由模块
-import router from './router/index'
+import router from './router/父子传参'
 // 根组件
 import App from './App.vue'
 // 引入vue文件
